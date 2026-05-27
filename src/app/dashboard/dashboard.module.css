@@ -782,3 +782,79 @@
   border-bottom: none;
   padding-bottom: 0;
 }
+
+/* Form inputs, labels, and groups */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-400);
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--gray-800) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all var(--transition-fast) !important;
+  outline: none !important;
+}
+
+.input:focus {
+  border-color: var(--neon-blue) !important;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.2) !important;
+}
+
+.input::placeholder {
+  color: var(--gray-600) !important;
+}
+
+/* Custom Styled Select dropdown */
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 16px !important;
+  padding-right: 44px !important;
+  cursor: pointer !important;
+}
+
+/* Pricing Toggle Switch Buttons */
+.billingBtn {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.billingBtn:hover {
+  color: #ffffff;
+}
+
+.billingBtnActive {
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+  color: #030307 !important;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+

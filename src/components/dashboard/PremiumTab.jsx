@@ -208,19 +208,16 @@ export default function PremiumTab({ user, onProfileUpdate }) {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              {/* Toggle monthly/yearly */}
               <div style={{ display: "flex", background: "rgba(255,255,255,0.03)", padding: 4, borderRadius: 100, border: "1px solid var(--card-border)" }}>
                 <button 
                   onClick={() => setSelectedPlan("monthly")} 
-                  className={styles.billingBtn} 
-                  style={{ padding: "6px 12px", fontSize: 11, background: selectedPlan === "monthly" ? "linear-gradient(135deg, var(--neon-blue), var(--neon-purple))" : "none", color: selectedPlan === "monthly" ? "#030307" : "white" }}
+                  className={`${styles.billingBtn} ${selectedPlan === "monthly" ? styles.billingBtnActive : ""}`}
                 >
                   Monthly (₹99)
                 </button>
                 <button 
                   onClick={() => setSelectedPlan("yearly")} 
-                  className={styles.billingBtn} 
-                  style={{ padding: "6px 12px", fontSize: 11, background: selectedPlan === "yearly" ? "linear-gradient(135deg, var(--neon-blue), var(--neon-purple))" : "none", color: selectedPlan === "yearly" ? "#030307" : "white" }}
+                  className={`${styles.billingBtn} ${selectedPlan === "yearly" ? styles.billingBtnActive : ""}`}
                 >
                   Yearly (₹999)
                 </button>

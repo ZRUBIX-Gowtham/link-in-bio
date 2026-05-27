@@ -57,11 +57,12 @@ export const dbService = {
       const q = query(
         collection(db, "links"), 
         where("uid", "==", uid), 
-        where("enabled", "==", true),
-        orderBy("order", "asc")
+        where("enabled", "==", true)
       );
       const linksSnap = await getDocs(q);
-      const links = linksSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+      const links = linksSnap.docs
+        .map(d => ({ id: d.id, ...d.data() }))
+        .sort((a, b) => (a.order || 0) - (b.order || 0));
 
       return { user, links };
     }
@@ -77,11 +78,12 @@ export const dbService = {
     } else {
       const q = query(
         collection(db, "links"), 
-        where("uid", "==", uid),
-        orderBy("order", "asc")
+        where("uid", "==", uid)
       );
       const snap = await getDocs(q);
-      return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      return snap.docs
+        .map(d => ({ id: d.id, ...d.data() }))
+        .sort((a, b) => (a.order || 0) - (b.order || 0));
     }
   },
 
