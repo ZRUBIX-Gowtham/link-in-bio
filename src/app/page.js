@@ -467,7 +467,7 @@ export default function LandingPage() {
         <div className={styles.testimonialsGrid}>
           <div className={`${styles.testimonialCard} glass-card`}>
             <p className={styles.testimonialText}>
-              “LinkNest completely transformed my bio page. The neon dark-mode aesthetic is exactly what I wanted. My followers love the design, and I've noticed a major bump in engagement.”
+              {"“LinkNest completely transformed my bio page. The neon dark-mode aesthetic is exactly what I wanted. My followers love the design, and I've noticed a major bump in engagement.”"}
             </p>
             <div className={styles.testimonialUser}>
               <div className={styles.testimonialUserAvatar}>AR</div>
@@ -510,7 +510,7 @@ export default function LandingPage() {
       <section className={styles.faq} id="faq">
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
-          <p className={styles.sectionSubtitle}>Have questions about LinkNest? We've got answers.</p>
+          <p className={styles.sectionSubtitle}>{"Have questions about LinkNest? We've got answers."}</p>
         </div>
 
         <div className={styles.faqList}>
